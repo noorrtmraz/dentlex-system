@@ -12,3 +12,21 @@
     });
 
   });
+
+
+  const sidebar = document.querySelector('.sb-sidebar');
+  const overlay = document.querySelector('.sb-overlay');
+  const toggleBtn = document.querySelector('.sb-toggle-btn');
+
+  toggleBtn.addEventListener('click', () => {
+    sidebar.classList.add('is-open');
+    overlay.classList.add('is-active');
+  });
+
+  overlay.addEventListener('click', () => {
+    sidebar.classList.remove('is-open');
+    overlay.classList.remove('is-active');
+  });
+
+
+

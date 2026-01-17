@@ -342,21 +342,18 @@ body {
 
 .ov-card i.ov-arrow-up{
     color: var(--success);
-    width: 10px;
-    height: 10px;
+    font-size: 12px;
 }
 
 .ov-card i.ov-arrow-down{
     color: var(--error);
-    width: 6px;
-    height: 6px;
+    font-size: 12px;
 }
 
 .ov-card-value {
   font-size: 20px;
   font-weight: 700;
   color: var(--text-primary);
-  padding: 0 10px;
 }
 
 /* BODY */
@@ -367,6 +364,355 @@ body {
 }
 
 /* overview end */
+
+/* SMALL CARD */
+
+.dist-cards{
+  margin-top: .1rem;
+  height: 260px;
+}
+.dist-small-card {
+  border-radius: 20px;
+  border: none;
+  height: 100%;
+}
+
+.small-title {
+  font-size: 16px;
+  font-weight: 600;
+  /* margin-bottom: 16px; */
+}
+
+.small-stat {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 32px; /* عمود للنص | عمود للسهم */
+  grid-template-rows: auto auto;
+  row-gap: 6px;
+
+  padding-inline-start: 30px; /* 👈 هذا السطر المهم */
+}
+
+
+/* الجملة */
+.small-stat span:first-child {
+  grid-column: 1;
+  grid-row: 1;
+  font-size: 14px;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+/* الرقم */
+.small-stat span:last-child {
+  grid-column: 1;
+  grid-row: 2;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--text-primary);
+}
+
+/* السهم */
+.small-stat span:last-child i {
+  position: absolute;
+  right: 0;               /* لأن RTL */
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+}
+
+/* ألوان الحالات */
+.small-stat.up span:last-child i {
+  color: var(--success);
+}
+
+.small-stat.down span:last-child i {
+  color: var(--error);
+}
+
+
+
+
+/* BIG CARD */
+.dist-big-card {
+  border-radius: 20px;
+  border: none;
+  height: 100%;
+}
+
+.dist-big-layout {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+/* CHART */
+.dist-chart {
+  width: 55%;
+  height: 180px;
+  margin-inline-start: auto;
+}
+
+/* TEXT */
+.dist-text {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-right: 1.5rem;
+}
+
+.dist-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+}
+
+.dist-country {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #292D30;
+}
+
+.country-value {
+  background: #F2F2F2;
+  padding: 4px 8px;
+  border-radius: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  width: 66px;
+  height: 36px;
+}
+
+.country-value i{
+  font-size: 12px;
+  color: var(--success);
+  padding: 0 .5rem;
+}
+
+.dist-subtitle {
+  font-size: 13px;
+  color: #8D9092;
+  font-weight: bold;
+}
+
+
+.sys-card {
+  border: none;
+  border-radius: 20px;
+  padding: 20px;
+  height: 100%;
+}
+
+/* الإشعارات */
+.notif-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+  background: transparent;
+  padding-bottom: 12px;
+}
+
+.notif-title {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.notif-link {
+  font-size: 13px;
+  color: #6C63FF;
+  text-decoration: none;
+}
+
+.notif-list {
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+.notif-item {
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 12px;
+  background: #f8f9fb;
+  margin-bottom: 10px;
+}
+
+.notif-item p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.notif-item small {
+  color: #8a8aa3;
+}
+
+.notif-icon {
+  color: #6c63ff;
+  font-size: 16px;
+  margin-top: 4px;
+}
+
+
+.gauge-wrapper {
+  position: relative;
+  height: 180px;
+}
+
+.gauge-center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.gauge-value {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.gauge-label {
+  font-size: 14px;
+  color: #8a8aa3;
+}
+
+.status-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.status-stats small {
+  color: #8a8aa3;
+  font-size: 12px;
+}
+
+.status-stats strong {
+  font-size: 14px;
+}
+
+
+/* ----notification part start----- */
+.sys-card {
+  border: none;
+  border-radius: 20px;
+  padding: 20px;
+  height: 100%;
+}
+
+/* الإشعارات */
+.notif-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+  background: transparent;
+  padding-bottom: 12px;
+}
+
+.notif-title {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.notif-link {
+  font-size: 13px;
+  color: #6C63FF;
+  text-decoration: none;
+}
+
+.notif-list {
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+.notif-item {
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 12px;
+  background: #f8f9fb;
+  margin-bottom: 10px;
+}
+
+.notif-item p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.notif-item small {
+  color: #8a8aa3;
+}
+
+.notif-icon {
+  color: #6c63ff;
+  font-size: 16px;
+  margin-top: 4px;
+}
+
+/* Gauge */
+.status-title {
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.gauge-wrapper {
+  position: relative;
+  width: 250px;
+  height: 230px;   /* نص دايرة */
+  margin: auto;
+}
+
+.gauge-wrapper canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.gauge-center {
+  position: absolute;
+  top: 20px;                 /* 👈 يثبت النص داخل القوس */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.gauge-value {
+  font-size: 28px;
+  font-weight: 700;
+  color: #121217;
+}
+
+.gauge-label {
+  font-size: 14px;
+  color: #8A8AA3;
+}
+
+
+.status-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.status-stats small {
+  color: #8a8aa3;
+  font-size: 12px;
+}
+
+.status-stats strong {
+  font-size: 14px;
+}
+
+/* notification part end */
 
 
 
@@ -544,8 +890,20 @@ body {
   .ov-card-value {
     font-size: 18px;
   }
-}
 
+
+
+/* ------------- */
+  .dist-big-layout {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .dist-chart {
+    width: 100%;
+  }
+
+}
 /* =========================
    SMALL MOBILE (≤ 480px)
    ========================= */

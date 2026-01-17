@@ -330,6 +330,160 @@
 
 </div>
 
+
+<div class="col-12">
+  <div class="row g-3 dist-cards">
+
+    <!-- SMALL CARD -->
+    <div class="col-12 col-md-3">
+      <div class="card dist-small-card">
+        <div class="card-body">
+
+          <h6 class="small-title mb-4">العيادات في النظام</h6>
+
+          <div class="small-stat up">
+          <span>عدد العيادات النشطة</span>
+          <span><i class="fa-solid fa-arrow-trend-up"></i> 38</span>
+        </div>
+
+
+
+          <hr>
+
+          <div class="small-stat down">
+            <span>عدد العيادات غير النشطة</span>
+            <span><i class="fa-solid fa-arrow-trend-down"></i> 38</span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- BIG CARD -->
+    <div class="col-12 col-md-9">
+      <div class="card dist-big-card">
+        <div class="card-body dist-big-layout">
+
+         
+
+          <!-- TEXT -->
+          <div class="dist-text">
+            <h6 class="dist-title">توزيع العيادات حسب الدولة</h6>
+
+            <div class="dist-country">
+              
+              <span class="country-value">
+                <i class="fa-solid fa-arrow-trend-up ov-arrow-up"></i> 38
+              </span>
+              <span>فلسطين</span>
+            </div>
+
+            <small class="dist-subtitle">هذا الشهر</small>
+          </div>
+
+           <!-- CHART -->
+
+          <div class="dist-chart">
+            <canvas id="citiesChart"></canvas>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <!-- notification part start -->
+     <div class="row g-3 system-row">
+
+       <!-- كارد حالة النظام -->
+  <div class="col-12 col-lg-7">
+    <div class="card sys-card status-card">
+          <h6 class="small-title">حالة النظام التشغيلية </h6>
+
+      <div class="gauge-wrapper">
+
+        <canvas id="systemGauge"></canvas>
+
+        <div class="gauge-center">
+          <div class="gauge-value">84%</div>
+          <div class="gauge-label">استهلاك السيرفر</div>
+        </div>
+
+      </div>
+
+
+
+      <div class="status-stats">
+        <div>
+          <small>استهلاك قاعدة البيانات</small>
+          <strong>57%</strong>
+        </div>
+        <div>
+          <small>سرعة الاستجابة</small>
+          <strong>148 Ms</strong>
+        </div>
+        <div>
+          <small>حالة النظام</small>
+          <strong class="text-success">متصل</strong>
+        </div>
+        <div>
+          <small>الإصدار الحالي</small>
+          <strong>v3.2.5</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- كارد الإشعارات -->
+  <div class="col-12 col-lg-5">
+    <div class="card sys-card notif-card">
+      <div class="card-header notif-header">
+        <h6 class="small-title">الاشعارات والتنبيهات</h6>
+        <a href="#" class="notif-link">الكل</a>
+      </div>
+
+      <div class="notif-list">
+        <div class="notif-item">
+          <i class="fa-regular fa-bell notif-icon"></i>
+          <div>
+            <p>تم إنهاء الاشتراك لعيادة النور. يرجى التجديد لتجنب توقف الخدمات.</p>
+            <small>5 دقائق</small>
+          </div>
+        </div>
+
+        <div class="notif-item">
+          <i class="fa-regular fa-bell notif-icon"></i>
+          <div>
+            <p>تذكرة الدعم #2849 مفتوحة لأكثر من 48 ساعة.</p>
+            <small>5 دقائق</small>
+          </div>
+        </div>
+
+        <div class="notif-item">
+          <i class="fa-regular fa-bell notif-icon"></i>
+          <div>
+            <p>فشل الاتصال الخارجي مع API في وحدة المخزون.</p>
+            <small>5 دقائق</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ 
+
+</div>
+
+
+
+    
+
+  </div>
+</div>
+
+
+
+
   </div>
 
 </div>
@@ -346,6 +500,7 @@
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
         <script src="../../js/script.js"></script>
 
     </body>
